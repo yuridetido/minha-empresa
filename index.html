@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Technology Productions</title>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+
+body{
+
+background:#020617;
+color:white;
+overflow-x:hidden;
+
+}
+
+
+
+/* PARTICULAS */
+
+#particles{
+
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
+
+}
+
+
+.particle{
+
+position:absolute;
+width:5px;
+height:5px;
+background:#00eaff;
+border-radius:50%;
+opacity:.7;
+
+animation:float 10s infinite;
+
+}
+
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+}
+
+100%{
+transform:translateY(-10vh);
+}
+
+}
+
+
+
+/* HEADER */
+
+
+header{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+
+background:
+radial-gradient(circle,#123b70,#020617);
+
+}
+
+
+header h1{
+
+font-size:70px;
+color:#00eaff;
+
+animation:glow 2s infinite alternate;
+
+}
+
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 10px #00eaff;
+}
+
+to{
+text-shadow:0 0 50px #00eaff;
+}
+
+}
+
+
+
+header p{
+
+max-width:700px;
+font-size:22px;
+margin:25px;
+
+animation:fade 2s;
+
+}
+
+
+.btn{
+
+padding:18px 40px;
+
+border-radius:40px;
+
+background:#00eaff;
+color:#001;
+
+text-decoration:none;
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+
+.btn:hover{
+
+transform:scale(1.15);
+box-shadow:0 0 40px #00eaff;
+
+}
+
+
+
+
+section{
+
+padding:100px 10%;
+
+}
+
+
+
+.title{
+
+text-align:center;
+font-size:45px;
+margin-bottom:60px;
+color:#00eaff;
+
+animation:fadeUp 1s;
+
+}
+
+
+
+/* SERVICOS */
+
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+transition:.5s;
+
+animation:fadeUp 1s;
+
+}
+
+
+.card:hover{
+
+transform:
+translateY(-15px)
+rotateX(10deg);
+
+box-shadow:
+0 20px 50px #00eaff55;
+
+}
+
+
+
+.card h3{
+
+color:#00eaff;
+margin-bottom:20px;
+
+}
+
+
+
+
+/* STATUS */
+
+
+.stats{
+
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+
+}
+
+
+.stat{
+
+background:#07152f;
+
+padding:30px;
+
+border-radius:20px;
+
+width:220px;
+
+text-align:center;
+
+animation:pulse 3s infinite;
+
+}
+
+
+.stat h2{
+
+font-size:45px;
+color:#00eaff;
+
+}
+
+
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+
+
+
+/* EQUIPE */
+
+
+.team{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+
+}
+
+
+.person{
+
+width:250px;
+
+padding:35px;
+
+background:
+linear-gradient(145deg,#0b1738,#020617);
+
+border-radius:25px;
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+
+
+.person:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 40px #00eaff;
+
+}
+
+
+.person h3{
+
+font-size:28px;
+color:#00eaff;
+
+}
+
+
+
+.role{
+
+margin-top:15px;
+color:#aaa;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+padding:30px;
+
+text-align:center;
+
+background:#000;
+
+color:#777;
+
+}
+
+
+
+
+/* ANIMACOES */
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div id="particles"></div>
+
+
+<header>
+
+
+<h1>
+My Technology Productions
+</h1>
+
+
+<p>
+Tecnologia, inovação e suporte especializado
+para transformar ideias em soluções digitais.
+</p>
+
+
+<a class="btn" href="#servicos">
+Explorar Serviços
+</a>
+
+
+</header>
+
+
+
+
+<section id="servicos">
+
+
+<h2 class="title">
+Serviços de TI
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+<h3>🔐 Reset de Senha</h3>
+<p>Recuperação de acesso e contas digitais.</p>
+</div>
+
+
+<div class="card">
+<h3>💻 Manutenção</h3>
+<p>Reparo e otimização de computadores.</p>
+</div>
+
+
+<div class="card">
+<h3>🗄 Banco de Dados</h3>
+<p>Organização e manutenção de informações.</p>
+</div>
+
+
+<div class="card">
+<h3>📶 Redes Wi-Fi</h3>
+<p>Configuração e melhoria de redes.</p>
+</div>
+
+
+<div class="card">
+<h3>⚙ Softwares</h3>
+<p>Instalação e configuração de programas.</p>
+</div>
+
+
+<div class="card">
+<h3>📧 E-mails</h3>
+<p>Criação e configuração profissional.</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+Nossa Performance
+</h2>
+
+
+<div class="stats">
+
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Suporte</p>
+</div>
+
+
+<div class="stat">
+<h2>100%</h2>
+<p>Dedicação</p>
+</div>
+
+
+<div class="stat">
+<h2>N1/N2</h2>
+<p>Equipe Técnica</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+Equipe
+</h2>
+
+
+<div class="team">
+
+
+<div class="person">
+
+<h3>Yuri</h3>
+
+<p class="role">
+Analista
+</p>
+
+</div>
+
+
+
+<div class="person">
+
+<h3>Matheus Gouveia</h3>
+
+<p class="role">
+Analista
+</p>
+
+</div>
+
+
+
+
+<div class="person">
+
+<h3>Theo</h3>
+
+<p class="role">
+Supervisor
+</p>
+
+</div>
+
+
+
+<div class="person">
+
+<h3>Patricia</h3>
+
+<p class="role">
+Gerente
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+© 2026 My Technology Productions
+
+</footer>
+
+
+
+
+<script>
+
+
+// criar partículas
+
+for(let i=0;i<80;i++){
+
+let p=document.createElement("div");
+
+p.className="particle";
+
+
+p.style.left=Math.random()*100+"%";
+
+p.style.animationDelay=
+Math.random()*10+"s";
+
+
+p.style.animationDuration=
+5+Math.random()*10+"s";
+
+
+document
+.getElementById("particles")
+.appendChild(p);
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>
